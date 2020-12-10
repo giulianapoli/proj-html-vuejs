@@ -104,3 +104,53 @@
   height: 80px;
   background-color: green;
 }
+
+/* SERVICES */
+.services.container {
+  background-color: black;
+  height: 700px;
+}
+
+.paragraph {
+  color: white;
+}
+
+.boxes {
+  flex-wrap: wrap;
+}
+
+.box {
+  color: white;
+  width: 300px;
+  /* margin: 20px; */
+  background-color: grey;
+}
+
+/* PRODUCTS */
+
+/* EDITORIAL */
+.editorial.container {
+  background-color: beige;
+}
+
+/* NEWSLETTER */
+.newsletter.container {
+  height: 500px;
+  background-image: url(../images/bg-1.jpg);
+  background-size: cover;
+}
+
+/* QUOTE */
+.container .sending {
+  width: 60%;
+}
+
+.all.contacts {
+  width: 40%;
+  background-color: red;
+}
+
+/* FOOTER */
+.footer.boxes > .box {
+  width: 250px;
+}
