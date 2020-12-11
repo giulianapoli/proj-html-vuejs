@@ -99,59 +99,52 @@
                     HOME
                   </a>
                 </li>
+
                 <li>
                   <a class="flex items-center" href="#">
                     ABOUT
                     <i class="fas fa-chevron-down"
                     @click="dropdown"
                     ></i>
-
-                    <div class="dropdown"
-                    :class="{active : isActive}"
-                    >
-                      <ul>
-                        <li>the company</li>
-                        <li>Institutional</li>
-                        <li>social & events</li>
-                        <li>innovation</li>
-                        <li>environment</li>
-                        <li>technology</li>
-                      </ul>
-                    </div>
                   </a>
+
+                  <div class="dropdown"
+                  :class="{active : isActive}"
+                  >
+                    <ul>
+                      <li>the company</li>
+                      <li>Institutional</li>
+                      <li>social & events</li>
+                      <li>innovation</li>
+                      <li>environment</li>
+                      <li>technology</li>
+                    </ul>
+                  </div>
                 </li>
 
                 <li>
                   <a class="flex items-center" href="#">
                     SERVICES
                     <i class="fas fa-chevron-down"
-                    @click="dropdown"
+
                     ></i>
 
-                    <div class="dropdown"
-                    :class="{active : isActive}"
-                    >
-                      <ul>
-                        <li>the company</li>
-                        <li>Institutional</li>
-                        <li>social & events</li>
-                        <li>innovation</li>
-                        <li>environment</li>
-                        <li>technology</li>
-                      </ul>
-                    </div>
+
                   </a>
                 </li>
+
                 <li>
                   <a href="#">
                     PRICING
                   </a>
                 </li>
+
                 <li>
                   <a href="#">
                     BLOG
                   </a>
                 </li>
+
                 <li>
                   <button type="button" name="button"
                   class="primary-btn"
@@ -619,21 +612,21 @@
                 <div>
                   <a href="#">
                     <i class="fas fa-phone word-bg"></i>
-                    +1 (305) 1234-5678
+                    {{phoneNumber}}
                   </a>
                 </div>
 
                 <div>
                   <a href="#">
                     <i class="fas fa-briefcase word-bg"></i>
-                    hello@example.com
+                    {{emailAddress}}
                   </a>
                 </div>
 
                 <div>
                   <a href="#">
                     <i class="fas fa-map-marker-alt word-bg"></i>
-                    Main Avenue, 987
+                    {{address}}
                   </a>
 
                 </div>
@@ -670,15 +663,15 @@
                   <div class="contact grey">
                     <div>
                       <i class="fas fa-phone"></i>
-                      +1 (305) 1234-5678
+                      {{phoneNumber}}
                     </div>
                     <div>
                       <i class="fas fa-envelope"></i>
-                      hello@example.com
+                      {{emailAddress}}
                     </div>
                     <div>
                       <i class="fas fa-map-marker-alt"></i>
-                      Main Avenue, 987
+                      {{address}}
                     </div>
 
                     <button type="button" name="button"

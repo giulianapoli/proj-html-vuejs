@@ -189,8 +189,8 @@
 
 .dropdown {
   background-color: white;
-  position: absolute;
   display: none;
+  position: absolute;
   top: 20px;
   border-radius: 3px;
   text-transform: uppercase;
@@ -198,7 +198,7 @@
 }
 
 .active {
-  display:block;
+  display: block;
 }
 
 .dropdown ul li {
