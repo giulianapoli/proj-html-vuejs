@@ -14,6 +14,8 @@
   margin:auto;
 }
 
+
+
 /* COMMON */
 .inline {
   display: inline-block;
@@ -43,8 +45,42 @@
   justify-content: flex-end;
 }
 
-/* NAVBAR */
+.word-bg {
+  color: #0d7e7e;
+  background-color: rgba(57, 196, 198, .2);
+  padding: 10px;
+  border-radius: 3px;
+}
 
+.grey {
+  color: #706c68;
+  font-weight: lighter;
+}
+
+.primary-btn {
+  background-color: #0d7e7e;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  color: #d4d7d1;
+  border-radius: 3px;
+  width: 130px;
+}
+
+.empty-btn {
+  border: 1px solid #248a8a;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 15px;
+  color: #d4d7d1;
+  border-radius: 3px;
+  width: 130px;
+  text-transform: uppercase;
+}
+
+
+
+/* NAVBAR */
 .nav.container {
   background-color: #24333d;
   color: #c0c3d0;
@@ -52,67 +88,259 @@
   font-weight: lighter;
 }
 
-.social li {
-  display: inline-block;
+/* lato sx */
+.col-sx {
+  width: 50%;
 }
 
-.social li i {
+.col-sx > i {
+  margin-right: 5px;
+}
+
+/* lato dx */
+.col-dx {
+  width: 50%;
+}
+
+.nav.row .col-dx {
+  justify-content: flex-end;
+}
+
+.social li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.social li a {
+  text-decoration: none;
+  color: #c0c3d0;
+}
+
+.social li a i {
   font-size: 15px;
 }
+
+
 
 /* HERO */
 .hero.container {
   background-image: url(../images/hero-image.png);
+  opacity: 0.9;
   height: 600px;
   background-size: cover;
+  position: relative;
 }
 
-.hero-row {
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero.row {
   height: 10%;
+  position: relative;
+  z-index: 5;
 }
 
-.hero-nav.right ul li {
-  display: inline-block;
+/* sx */
+.nex {
+  color: #39c4c6;
+  padding: 10px;
+  background-color: rgba(57, 196, 198, .2);
+  border-radius: 20px 0 0 20px;
+  /* opacity: 0.5; */
 }
+
+.gen {
+  color: #e3e7df;
+}
+
+.hero-nav-left {
+  width: 40%;
+}
+
+/* dx */
+.hero-nav-right {
+  width: 60%;
+  font-weight: lighter;
+}
+
+.hero-nav-right ul li {
+  margin-left: 25px;
+}
+
+.hero-nav-right ul li a {
+  text-decoration: none;
+  color: #e5e9e2;
+}
+
+.hero-nav-right ul li a i {
+  margin-left: 5px;
+}
+
+
+/* HERO BOX */
+.row .type {
+  position: absolute;
+  width: 50%;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.type h1 {
+  font-size: 55px;
+  color: white;
+}
+
+.type p {
+  color: #c0c3d0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.type button {
+  margin-left: 20px;
+}
+
+
 
 /* BOXES UTILITIES */
 .boxes.container {
   height: 400px;
+  background-color: #e3e7df;
 }
 
 .case {
-  background-color: red;
-  height: 100px;
-  width: 100px;
+  background-color: #ffffff;
+  width: 350px;
+  margin: 20px;
   display: inline-block;
+  transition: 0.3s;
+  border-radius: 5px;
 }
 
-/* HISTORY */
+.case:hover {
+  transform: scale(1.1);
+}
+
+.case > * {
+  padding: 25px;
+}
+
+.case div i {
+  color: #0d7e7e;
+  font-size: 2rem;
+  background-color: rgba(57, 196, 198, .2);
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.case div h3 {
+  color: #24333d;
+  margin-top: 20px;
+}
+
+.case div p {
+  color: #706c68;
+  font-weight: lighter;
+  margin-top: 20px;
+}
+
+
+
+/* ABOUT */
 .history.container {
-  height: 550px;
-  background-color: beige;
+  background-color: #ffffff;
 }
 
+/* sx */
 .info.left {
   width: 50%;
-  height: 100px;
-  background-color: purple;
+  padding-left: 3%;
+  padding-top: 8%;
 }
 
+.info.left h3:first-child {
+  color: #038483;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 5%;
+}
+
+.info.left h1 {
+  margin-bottom: 5%;
+  color: #24333d;
+}
+
+.history-boxes {
+  padding-top: 10%;
+}
+
+.history-box {
+  width: 40%;
+}
+
+.history-box h4 {
+  margin-bottom: 10px;
+  color: #24333d;
+  font-size: 20px;
+}
+
+/* dx */
 .image.right {
   width: 50%;
-  height: 80px;
-  background-color: green;
+  position: relative;
 }
+
+.image.right img {
+  /* position: absolute; */
+  width: 100%;
+  background-size: cover;
+}
+
+
 
 /* SERVICES */
 .services.container {
-  background-color: black;
-  height: 700px;
+  background-color: #121117;
+  height: 850px;
+  position: relative;
+}
+
+.services.container .row {
+  margin-top: 50px;
+  position: absolute;
+  left: 5vw;
 }
 
 .paragraph {
   color: white;
+}
+
+.paragraph h3 {
+  color: #038483;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.paragraph h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.description p {
+  width: 95%;
+}
+
+.description .empty-btn {
+  width: 90px;
 }
 
 .boxes {
@@ -121,9 +349,35 @@
 
 .box {
   color: white;
-  width: 300px;
-  /* margin: 20px; */
-  background-color: grey;
+  flex-basis: 30%;
+  background-color: #1e2223;
+  padding: 30px;
+  border-radius: 5px;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+.box i {
+  font-size: 30px;
+  color: #038483;
+}
+
+.box h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.box .empty-btn {
+  margin-top: 20px;
+}
+
+.boxes .first-row,
+.boxes .second-row {
+  justify-content: space-between;
 }
 
 /* PRODUCTS */
