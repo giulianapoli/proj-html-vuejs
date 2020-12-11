@@ -14,8 +14,22 @@ const rootApp = new Vue ({
   },
 
   methods: {
-    dropdown() {
-      this.isActive != this.isActive;
-    }
+      dropdown() {
+          this.isActive = !this.isActive;
+      },
+
+      documentClick(e) {
+          let el = this.$refs.dropdownMenu
+          let target = e.target
+          if (el !== target && !el.contains(target)) {
+              this.isActive = false
+          }
+      }
+  },
+  created() {
+      document.addEventListener('click', this.documentCliclk)
+  },
+  destroyed() {
+      document.removeEventListener('click', this.documentClick)
   }
 });

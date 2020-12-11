@@ -102,15 +102,29 @@
 
                 <li>
                   <a class="flex items-center" href="#">
-                    ABOUT
-                    <i class="fas fa-chevron-down"
-                    @click="dropdown"
-                    ></i>
-                  </a>
+                    <a class="flex items-center" href="#">
+                      ABOUT
+                      <i class="fas fa-chevron-down" @click="dropdown()"></i>
+                    </a>
 
-                  <div class="dropdown"
-                  :class="{active : isActive}"
-                  >
+                    <div class="dropdown" :class="{active : isActive==true}">
+                        <ul>
+                            <li>the company</li>
+                            <li>Institutional</li>
+                            <li>social & events</li>
+                            <li>innovation</li>
+                            <li>environment</li>
+                            <li>technology</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                  <a class="flex items-center" href="#">
+                    SERVICES
+                    <i class="fas fa-chevron-down" @click="dropdown()"></i>
+                    <div class="dropdown" :class="{active : isActive==true}">
+
                     <ul>
                       <li>the company</li>
                       <li>Institutional</li>
@@ -118,17 +132,8 @@
                       <li>innovation</li>
                       <li>environment</li>
                       <li>technology</li>
-                    </ul>
-                  </div>
-                </li>
-
-                <li>
-                  <a class="flex items-center" href="#">
-                    SERVICES
-                    <i class="fas fa-chevron-down"
-
-                    ></i>
-
+                      </ul>
+                    </div>
 
                   </a>
                 </li>
