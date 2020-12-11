@@ -175,6 +175,7 @@
 
 .hero-nav-right ul li {
   margin-left: 25px;
+  position: relative;
 }
 
 .hero-nav-right ul li a {
@@ -184,6 +185,25 @@
 
 .hero-nav-right ul li a i {
   margin-left: 5px;
+}
+
+.dropdown {
+  background-color: white;
+  position: absolute;
+  display: none;
+  top: 20px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.active {
+  display:block;
+}
+
+.dropdown ul li {
+  list-style: none;
+  padding: 10px;
 }
 
 

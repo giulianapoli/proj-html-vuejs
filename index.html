@@ -34,7 +34,8 @@
               <!-- lato sx -->
               <div class="col-sx flex items-center">
                 <i class="fas fa-clock"></i>
-                 Open Hours: Mon - Sat - 9.00 - 18.00
+                 Open Hours: {{ openHours.dayFrom }} - {{ openHours.dayTo}} - {{openHours.hoursFrom}} - {{
+                   openHours.hoursTo }}
               </div>
 
               <!-- lato dx -->
@@ -43,13 +44,13 @@
                   <li>
                     <a href="#">
                           <i class="fas fa-phone"></i>
-                          +1 (305) 1234-5678
+                          {{phoneNumber}}
                      </a>
                   </li>
                   <li>
                     <a href="#">
                       <i class="fas fa-envelope"></i>
-                       hello@example.com
+                      {{emailAddress}}
                     </a>
                   </li>
                   <li>
@@ -101,13 +102,44 @@
                 <li>
                   <a class="flex items-center" href="#">
                     ABOUT
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down"
+                    @click="dropdown"
+                    ></i>
+
+                    <div class="dropdown"
+                    :class="{active : isActive}"
+                    >
+                      <ul>
+                        <li>the company</li>
+                        <li>Institutional</li>
+                        <li>social & events</li>
+                        <li>innovation</li>
+                        <li>environment</li>
+                        <li>technology</li>
+                      </ul>
+                    </div>
                   </a>
                 </li>
+
                 <li>
                   <a class="flex items-center" href="#">
                     SERVICES
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down"
+                    @click="dropdown"
+                    ></i>
+
+                    <div class="dropdown"
+                    :class="{active : isActive}"
+                    >
+                      <ul>
+                        <li>the company</li>
+                        <li>Institutional</li>
+                        <li>social & events</li>
+                        <li>innovation</li>
+                        <li>environment</li>
+                        <li>technology</li>
+                      </ul>
+                    </div>
                   </a>
                 </li>
                 <li>
